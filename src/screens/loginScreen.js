@@ -45,10 +45,6 @@ const LoginScreen = ({navigation}) => {
           title="Users List"
           onPress={() => navigation.navigate('UsersList')}
         />
-        <Button
-          title="Listing"
-          onPress={() => navigation.navigate('Listing')}
-        />
       </View>
     </View>
   );
@@ -68,7 +64,7 @@ const styles = StyleSheet.create({
   },
   buttons: {
     justifyContent: 'space-between',
-    height: 140,
+    height: 100,
     marginTop: 20,
   },
 });
