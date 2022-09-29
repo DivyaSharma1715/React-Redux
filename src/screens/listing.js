@@ -6,13 +6,10 @@ import {fetchListing} from '../redux/actions';
 const Listing = ({userData, fetchListing}) => {
   useEffect(() => {
     let dataInApi = fetchListing();
-    console.log(dataInApi);
   }, []);
 
-  console.log('USERDATA', userData);
   return (
     <View>
-      {/* <Text>Listing</Text> */}
       <Text style={styles.heading}>DATA LISTING FROM API</Text>
       {userData?.loading ? (
         <View>
