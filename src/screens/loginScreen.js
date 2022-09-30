@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-import {Button, View, StyleSheet, Text} from 'react-native';
-import {TextInput} from 'react-native-gesture-handler';
+import {Button, View, StyleSheet, Text, TextInput} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {addUser} from '../redux/actions';
+
 const LoginScreen = ({navigation}) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [id, setId] = useState(0);
   const dispatch = useDispatch();
   const addUserInList = () => {
+    console.log('addUSeer');
     if (firstName !== '' && lastName !== '') {
       setId(id + 1);
       dispatch(addUser(firstName, lastName, id));
@@ -23,6 +24,7 @@ const LoginScreen = ({navigation}) => {
       }
     }
   };
+
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.heading}>LOGIN SCREEN</Text>
@@ -32,7 +34,6 @@ const LoginScreen = ({navigation}) => {
         placeholder="Enter firstname"
         onChangeText={value => setFirstName(value)}
       />
-
       <TextInput
         style={styles.textInput}
         value={lastName}
@@ -53,6 +54,7 @@ const LoginScreen = ({navigation}) => {
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   mainContainer: {
     justifyContent: 'center',

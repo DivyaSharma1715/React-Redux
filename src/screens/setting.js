@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-const SignupScreen = props => {
+const Setting = () => {
   return (
     <View>
-      <Text>SIGNUP</Text>
+      <Text>Settings screen</Text>
     </View>
   );
 };
-export default SignupScreen;
+export default Setting;

@@ -5,7 +5,7 @@ import {fetchListing} from '../redux/actions';
 
 const Listing = ({userData, fetchListing}) => {
   useEffect(() => {
-    let dataInApi = fetchListing();
+    fetchListing();
   }, []);
 
   return (

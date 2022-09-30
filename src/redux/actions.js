@@ -8,7 +8,6 @@ export const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
 import axios from 'axios';
 
 export const addUser = (firstName, lastName, id) => {
-  console.log(firstName, lastName);
   return {
     type: ADD_USER,
     payload: {
@@ -21,7 +20,6 @@ export const addUser = (firstName, lastName, id) => {
   };
 };
 export const deleteUser = index => {
-  console.log('action', index);
   return {
     type: DEL_USER,
     payload: index,

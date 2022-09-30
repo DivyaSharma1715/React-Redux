@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteUser} from '../redux/actions';
+
 const UsersList = () => {
   const list = useSelector(state => state.UserDataReducer.userName);
   const dispatch = useDispatch();
@@ -9,10 +10,11 @@ const UsersList = () => {
     dispatch(deleteUser(id));
     alert('User deleted successfully!!');
   };
+
   return (
     <View>
       <Text style={styles.listHeading}>USERS LIST</Text>
-      {list.length > 0 ? (
+      {list?.length > 0 ? (
         <FlatList
           data={list}
           renderItem={({item}) => (

@@ -13,6 +13,7 @@ const initialState = {
   loading: false,
   users: [],
 };
+
 const UserDataReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_USER:
